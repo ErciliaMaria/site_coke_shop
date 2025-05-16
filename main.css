@@ -38,7 +38,6 @@ header nav li a{
 }
 .container{
     max-width:1200px;
-    width:100%;
     margin : 0 auto;
 }
 header .container{
@@ -134,9 +133,6 @@ section .products .product p{
     width:270px;
     text-align: center;
 }
-section .section-produtos{
-    margin-bottom:100px;
-}
 .social-links img{
     height:24px;
 }
@@ -167,9 +163,6 @@ form textarea{
 section .container .contact-methods{
     margin-top:32px;
 }
-section .container .container-methods h3{
-   
-}
 section h3{
     margin-bottom:16px;
 }
@@ -189,4 +182,58 @@ footer{
     background-color:rgba(255, 99, 71);
     color:white;
     padding:16px;
+}
+@media screen and (min-width: 780px) and (max-width:1023px){
+    header .container{
+        justify-content: center;
+    }
+    section .container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section-produtos{
+        height:700px;
+    }
+    .section-produtos .container .products{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .contact-methods{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and ( max-width: 779px){
+      header .container{
+        justify-content: center;
+    }
+    section .container{
+        display: flex;             /* ativa flexbox */
+    flex-direction: column;    /* eixo principal vertical */
+    justify-content: center;   /* centraliza verticalmente */
+    align-items: center;       /* centraliza horizontalmente */
+    height: 100vh; 
+    max-width:500px;
+    }
+     .section-produtos{
+        height:950px;
+        max-width:770px;
+    }
+    .section-produtos .container .products{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;       /* centraliza horizontalmente */
+    height: 100vh; 
+    max-width:500px;
+    }
+      .contact-methods{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;       /* centraliza horizontalmente */
+        height: 100vh; 
+        max-width:500px;
+        padding:0;
+        margin:0;
+      }
 }
